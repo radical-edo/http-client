@@ -1,25 +1,26 @@
 {
-  "name": "react-boilerplate",
-  "version": "1.0.0",
-  "description": "React.js gulp setup",
+  "name": "http_client",
+  "version": "0.0.0",
+  "description": "HTTP Client for Browser",
   "engines": {
-    "node": ">=4.2.1",
-    "npm": ">=3.3.8"
+    "node": ">=5.6.0",
+    "npm": ">=3.3.12"
   },
   "scripts": {
     "dist": "bin/dist",
+    "prestart": "bin/init_server",
     "start": "bin/gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/radical-edo/react-boilerplate.git"
+    "url": "git+https://github.com/radical-edo/http-client.git"
   },
   "keywords": [
-    "react.js",
-    "es6",
-    "babelify",
-    "boilerplate",
-    "gulp"
+    "browser",
+    "http_client",
+    "request",
+    "api",
+    "json"
   ],
   "author": {
     "nickname": "radical-edo",
@@ -28,23 +29,23 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/radical-edo/react-boilerplate/issues"
+    "url": "https://github.com/radical-edo/http-client/issues"
   },
-  "homepage": "https://github.com/radical-edo/react-boilerplate#readme",
+  "homepage": "https://github.com/radical-edo/http-client#readme",
   "devDependencies": {
     "babelify": "^6.3.0",
+    "body-parser": "^1.15.0",
     "browserify": "^11.2.0",
     "colors": "^1.1.2",
+    "express": "^4.13.4",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-inject": "^3.0.0",
-    "gulp-minify-css": "^1.2.1",
     "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.2",
-    "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
-    "main-bower-files": "^2.9.0",
+    "lodash": "^4.5.0",
+    "pm2": "^1.0.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"
@@ -53,12 +54,5 @@
     "transform": [
       "babelify"
     ]
-  },
-  "dependencies": {
-    "history": "^1.17.0",
-    "lodash": "^4.0.0",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "react-router": "^1.0.3"
   }
 }

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+env="development"
+{
+  NODE_ENV=$env ./node_modules/.bin/pm2 restart development/server.js --name dev 
+} || {
+  NODE_ENV=$env ./node_modules/.bin/pm2 start development/server.js --name dev 
+}
+
+./node_modules/.bin/pm2 describe dev
+

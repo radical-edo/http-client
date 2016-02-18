@@ -13,25 +13,11 @@ var config = {
     }
   },
   paths: {
-    jsx: 'source/app/app.jsx',
-    watchApp: 'source/app/**/*.(jsx|js)',
-    watchStyles: 'source/styles/**/*.(scss|css)',
-    watchAssets: 'source/assets/**/*.*',
-    index: 'source/index.html',
+    js: 'lib/http_client.js',
+    watchApp: 'lib/**/*.js',
+    index: 'development/index.html',
     dest: dest,
-    scss: 'source/styles/app.scss',
-    assets: 'source/assets/**/*.*',
   },
 };
-
-function checkEnv(env) {
-  return env === process.env.NODE_ENV;
-}
-
-Object.defineProperty(config.env, 'production', {
-  get: function () {
-    return checkEnv('production');
-  }
-});
 
 module.exports = config;
